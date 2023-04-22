@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TappIOS", "TappIOS\TappIOS.csproj", "{F900C28E-F830-4D64-AB60-7CCCC9CBD73A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F900C28E-F830-4D64-AB60-7CCCC9CBD73A}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{F900C28E-F830-4D64-AB60-7CCCC9CBD73A}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{F900C28E-F830-4D64-AB60-7CCCC9CBD73A}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{F900C28E-F830-4D64-AB60-7CCCC9CBD73A}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{F900C28E-F830-4D64-AB60-7CCCC9CBD73A}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{F900C28E-F830-4D64-AB60-7CCCC9CBD73A}.Debug|iPhone.Build.0 = Debug|iPhone
+		{F900C28E-F830-4D64-AB60-7CCCC9CBD73A}.Release|iPhone.ActiveCfg = Release|iPhone
+		{F900C28E-F830-4D64-AB60-7CCCC9CBD73A}.Release|iPhone.Build.0 = Release|iPhone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CF45A7E-1B27-49CA-A35B-21358A53F4DA}
+	EndGlobalSection
+EndGlobal
