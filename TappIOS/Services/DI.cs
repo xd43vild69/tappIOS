@@ -4,6 +4,9 @@ using Unity.ServiceLocation;
 using CommonServiceLocator;
 using MediatR;
 using TappIOS.Domain;
+using TappIOS.Domain.User;
+using TappIOS.Domain.User.Services;
+using TappIOS.Domain.User.ViewModel;
 
 namespace TappIOS.Services
 {
@@ -19,9 +22,13 @@ namespace TappIOS.Services
 		public static void InitDI()
 		{
 			DI.Container = new UnityContainer();
-			//DI.Container.RegisterType<IGenericRepository<BaseEntity>, GenericRepository<BaseEntity>>();
+			DI.Container.RegisterType<IGenericRepository<BaseEntity>, GenericRepository<BaseEntity>>();
+            DI.Container.RegisterType<IUserRepository, UserRepository>();
 
-			var serviceLocator = new UnityServiceLocator(DI.Container);
+			DI.Container.RegisterType<IGenericViewModel<BaseEntity>, GenericViewModel<BaseEntity>>();
+            DI.Container.RegisterType<IUserViewModel, UserViewModel>();
+
+            var serviceLocator = new UnityServiceLocator(DI.Container);
 			ServiceLocator.SetLocatorProvider(() => serviceLocator);
 		}
 	}

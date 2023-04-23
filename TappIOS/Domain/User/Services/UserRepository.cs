@@ -5,22 +5,17 @@ using TappIOS.Services;
 
 namespace TappIOS.Domain.User.Services
 {
-	//public interface IUserRepository : IGenericRepository<User>
-	//{
- //       public Task<bool> UserExists(string name, CancellationToken cancellationToken = default);
- //   }
+	public interface IUserRepository : IGenericRepository<User>
+	{
+		public Task<bool> CheckUserLogin(string name, string password);
+	}
 
-
- //   public sealed class UserRepository: GenericRepository<User>, IUserRepository
-	//{
-	//	public UserRepository()
-	//	{
-	//	}
-
- //       public async Task<bool> UserExists(string name, CancellationToken cancellationToken = default)
-	//	{
-	//		return true;
-	//	}
- //   }
+    public sealed class UserRepository : GenericRepository<User>, IUserRepository
+    {
+        public Task<bool> CheckUserLogin(string name, string password)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
 

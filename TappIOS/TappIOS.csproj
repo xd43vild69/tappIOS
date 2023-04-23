@@ -141,6 +141,7 @@
         <Folder Include="Domain\Admin\DTOs\" />
         <Folder Include="Domain\Admin\Features\" />
         <Folder Include="Domain\Admin\Services\" />
+        <Folder Include="Domain\User\ViewModel\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="Storyboards\LaunchScreen.storyboard" />
@@ -167,12 +168,11 @@
         <Compile Include="Domain\User\Features\UserExists.cs" />
         <Compile Include="Services\DI.cs" />
         <Compile Include="Services\ServiceManager.cs" />
-        <Compile Include="Services\IBridge.cs" />
-        <Compile Include="Services\GenericBridge.cs" />
         <Compile Include="Domain\User\Features\UserGetData.cs" />
         <Compile Include="Domain\Admin\Features\AdminGetData.cs" />
-        <Compile Include="Domain\User\Services\UserRepository2.cs" />
         <Compile Include="Domain\Admin\Services\AdminRepository.cs" />
+        <Compile Include="Domain\User\ViewModel\UserViewModel.cs" />
+        <Compile Include="Services\GenericViewModel.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
