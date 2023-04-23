@@ -22,6 +22,7 @@ namespace TappIOS.Services
 		public static void InitDI()
 		{
 			DI.Container = new UnityContainer();
+
 			DI.Container.RegisterType<IGenericRepository<BaseEntity>, GenericRepository<BaseEntity>>();
             DI.Container.RegisterType<IUserRepository, UserRepository>();
 

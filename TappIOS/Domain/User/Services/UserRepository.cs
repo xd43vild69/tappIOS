@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using TappIOS.Services;
@@ -7,14 +8,29 @@ namespace TappIOS.Domain.User.Services
 {
 	public interface IUserRepository : IGenericRepository<User>
 	{
-		public Task<bool> CheckUserLogin(string name, string password);
+		Task<bool> CheckUserLogin(string name, string password);
 	}
 
     public sealed class UserRepository : GenericRepository<User>, IUserRepository
     {
-        public Task<bool> CheckUserLogin(string name, string password)
+        public async Task<bool> CheckUserLogin(string name, string password)
         {
-            throw new NotImplementedException();
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync("https://rickandmortyapi.com/api/character"))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        var apiResponse = await response.Content.ReadAsStringAsync();
+                        //reservation = JsonConvert.DeserializeObject<Reservation>(apiResponse);
+                    }
+                    else
+                    {
+                        var status = response.StatusCode;
+                    }
+                }
+            }
+            return true;
         }
     }
 }

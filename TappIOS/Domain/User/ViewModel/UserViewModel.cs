@@ -8,7 +8,7 @@ namespace TappIOS.Domain.User.ViewModel
 {
     public interface IUserViewModel : IGenericViewModel<User>
     {
-        public Task<bool> CheckUserLogin(string name, string password);
+         Task<bool> CheckUserLogin(string name, string password);
     }
 
     public class UserViewModel: GenericViewModel<User>, IUserViewModel

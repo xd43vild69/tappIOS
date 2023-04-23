@@ -7,9 +7,6 @@ namespace TappIOS.Domain
 	{
         public Guid Id { get; private set; } = Guid.NewGuid();
 
-        public IBridge _bridge;
-
-        public abstract void GetData();
     }
 }
 

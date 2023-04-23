@@ -2,15 +2,10 @@
 using System;
 using UIKit;
 using System.Threading.Tasks;
-using TappIOS.Domain.User.Features;
-using TappIOS.Domain.User;
 using MediatR;
 using TappIOS.Services;
 using TappIOS.Domain.User.Services;
-using TappIOS.Domain.Admin.Features;
-using TappIOS.Domain.Admin.Services;
 using TappIOS.Domain;
-using TappIOS.Domain.Admin;
 using TappIOS.Domain.User.ViewModel;
 
 namespace TappIOS
