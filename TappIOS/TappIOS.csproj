@@ -134,14 +134,11 @@
         <Folder Include="Storyboards\" />
         <Folder Include="Controllers\" />
         <Folder Include="Domain\User\" />
-        <Folder Include="Domain\User\DTOs\" />
-        <Folder Include="Domain\User\Features\" />
         <Folder Include="Domain\User\Services\" />
         <Folder Include="Domain\Admin\" />
-        <Folder Include="Domain\Admin\DTOs\" />
-        <Folder Include="Domain\Admin\Features\" />
         <Folder Include="Domain\Admin\Services\" />
         <Folder Include="Domain\User\ViewModel\" />
+        <Folder Include="Domain\Admin\VIewModel\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="Storyboards\LaunchScreen.storyboard" />
@@ -165,14 +162,12 @@
         <Compile Include="Domain\Admin\Admin.cs" />
         <Compile Include="Services\GenericRepository.cs" />
         <Compile Include="Domain\User\Services\UserRepository.cs" />
-        <Compile Include="Domain\User\Features\UserExists.cs" />
         <Compile Include="Services\DI.cs" />
         <Compile Include="Services\ServiceManager.cs" />
-        <Compile Include="Domain\User\Features\UserGetData.cs" />
-        <Compile Include="Domain\Admin\Features\AdminGetData.cs" />
         <Compile Include="Domain\Admin\Services\AdminRepository.cs" />
         <Compile Include="Domain\User\ViewModel\UserViewModel.cs" />
         <Compile Include="Services\GenericViewModel.cs" />
+        <Compile Include="Domain\Admin\VIewModel\AdminViewModel.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

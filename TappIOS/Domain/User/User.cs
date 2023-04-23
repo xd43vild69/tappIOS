@@ -6,12 +6,6 @@ namespace TappIOS.Domain.User
 		public User()
 		{
 		}
-
-        public override void GetData()
-        {
-            Console.WriteLine("GetData User Entity");
-            _bridge.GetData();
-        }
     }
 }
 

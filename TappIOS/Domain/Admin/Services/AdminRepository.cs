@@ -1,14 +1,18 @@
 ﻿using System;
+using System.Threading.Tasks;
 using TappIOS.Services;
 
 namespace TappIOS.Domain.Admin.Services
 {
-    public class AdminRepository : IBridge
+
+    public interface IAdminRepository : IGenericViewModel<Admin>
     {
-        public void GetData()
-        {
-            Console.WriteLine("Return admin repository data.");
-        }
+        
+    }
+
+    public sealed class AdminRepository : GenericRepository<Admin>, IAdminRepository
+    {
+
     }
 }
 
