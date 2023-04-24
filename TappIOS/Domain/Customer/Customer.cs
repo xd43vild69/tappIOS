@@ -6,6 +6,15 @@ namespace TappIOS.Domain.Customer
 		public Customer()
 		{
 		}
+
+        void Create() { }
+        void Update() { }
+        void Get() { }
+
+        void CreateAppointment() { }
+        void UpdateAppointment() { }
+        void GetAppointment() { }
+
     }
 }
 

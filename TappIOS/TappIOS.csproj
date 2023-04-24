@@ -139,6 +139,9 @@
         <Folder Include="Domain\Customer\Services\" />
         <Folder Include="Domain\User\ViewModel\" />
         <Folder Include="Domain\Customer\VIewModel\" />
+        <Folder Include="Domain\Appointment\" />
+        <Folder Include="Domain\Appointment\ViewModel\" />
+        <Folder Include="Domain\Appointment\Services\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="Storyboards\LaunchScreen.storyboard" />
@@ -168,6 +171,8 @@
         <Compile Include="Domain\User\ViewModel\UserViewModel.cs" />
         <Compile Include="Services\GenericViewModel.cs" />
         <Compile Include="Domain\Customer\VIewModel\CustomerViewModel.cs" />
+        <Compile Include="Domain\Appointment\Appointment.cs" />
+        <Compile Include="Domain\Appointment\ViewModel\AppoitmentViewModel.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

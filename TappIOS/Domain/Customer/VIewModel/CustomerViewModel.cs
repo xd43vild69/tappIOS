@@ -17,6 +17,14 @@ namespace TappIOS.Domain.Customer.VIewModel
         {
             CustomerRepository = customerRepository;
         }
+
+        void Create() { }
+        void Update() { }
+        void Get() { }
+
+        void CreateAppointment() { }
+        void UpdateAppointment() { }
+        void GetAppointment() { }
     }
 }
 
