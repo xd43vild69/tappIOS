@@ -146,6 +146,7 @@
     <ItemGroup>
         <InterfaceDefinition Include="Storyboards\LaunchScreen.storyboard" />
         <InterfaceDefinition Include="Storyboards\Main.storyboard" />
+        <InterfaceDefinition Include="Storyboards\UserCreation.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -176,6 +177,10 @@
         <Compile Include="Storyboards\MainViewController.cs" />
         <Compile Include="Storyboards\MainViewController.designer.cs">
           <DependentUpon>MainViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Storyboards\UserCreationViewController.cs" />
+        <Compile Include="Storyboards\UserCreationViewController.designer.cs">
+          <DependentUpon>UserCreationViewController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
