@@ -10,7 +10,7 @@ namespace TappIOS
         {
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
-            // main v1
+            // main v2
             UIApplication.Main(args, null, typeof(AppDelegate));
         }
     }
