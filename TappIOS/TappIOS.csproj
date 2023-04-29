@@ -147,6 +147,7 @@
         <InterfaceDefinition Include="Storyboards\LaunchScreen.storyboard" />
         <InterfaceDefinition Include="Storyboards\Main.storyboard" />
         <InterfaceDefinition Include="Storyboards\UserCreation.storyboard" />
+        <InterfaceDefinition Include="Storyboards\UserWorkflow.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
