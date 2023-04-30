@@ -147,7 +147,7 @@
         <InterfaceDefinition Include="Storyboards\LaunchScreen.storyboard" />
         <InterfaceDefinition Include="Storyboards\Main.storyboard" />
         <InterfaceDefinition Include="Storyboards\UserCreation.storyboard" />
-        <InterfaceDefinition Include="Storyboards\UserWorkflow.storyboard" />
+        <InterfaceDefinition Include="Storyboards\CustomerWorkflow.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -186,6 +186,10 @@
         <Compile Include="Storyboards\Main2ViewController.cs" />
         <Compile Include="Storyboards\Main2ViewController.designer.cs">
           <DependentUpon>Main2ViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Storyboards\CustomerRegisterViewController.cs" />
+        <Compile Include="Storyboards\CustomerRegisterViewController.designer.cs">
+          <DependentUpon>CustomerRegisterViewController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
