@@ -12,6 +12,6 @@ namespace TappIOS
             // you can specify it here.
             // main v4
             UIApplication.Main(args, null, typeof(AppDelegate));
-        }
+        }   
     }
 }
