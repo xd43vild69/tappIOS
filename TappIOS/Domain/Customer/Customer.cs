@@ -3,7 +3,10 @@ namespace TappIOS.Domain.Customer
 {
 	public class Customer : BaseEntity
 	{
-		public Customer()
+
+        public string Name { get; set; }
+
+        public Customer()
 		{
 		}
 
