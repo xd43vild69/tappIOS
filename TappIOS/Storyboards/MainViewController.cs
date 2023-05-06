@@ -3,7 +3,9 @@
 using System;
 
 using Foundation;
+using TappIOS.Domain.User.ViewModel;
 using UIKit;
+using System.Diagnostics;
 
 namespace TappIOS.Storyboards
 {
@@ -12,5 +14,22 @@ namespace TappIOS.Storyboards
 		public MainViewController (IntPtr handle) : base (handle)
 		{
 		}
-	}
+
+        public override async void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+            Debug.Write($"Method name {nameof(ViewDidLoad)}", "Did Load");
+
+            //TODO: Set user information from ServiceManager.SetName - SetConfigs - SetCalendar
+
+            //TODO: Show Login Screen. CheckLogin - LoadSegttings - ShowMainMenu
+
+            //TODO: Show main dashboard. 
+
+            //var isLogged = await userViewModel.CheckUserLogin("d13", "d13");
+
+            // Perform any additional setup after loading the view, typically from a nib.
+        }
+    }
 }

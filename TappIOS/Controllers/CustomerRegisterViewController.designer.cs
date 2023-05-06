@@ -12,6 +12,8 @@ namespace TappIOS.Storyboards
 	[Register ("CustomerRegisterViewController")]
 	partial class CustomerRegisterViewController
 	{
+		[Action ("btnContinue:")]
+		partial void btnContinue (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

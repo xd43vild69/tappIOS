@@ -187,12 +187,12 @@
         <Compile Include="Storyboards\Main2ViewController.designer.cs">
           <DependentUpon>Main2ViewController.cs</DependentUpon>
         </Compile>
-        <Compile Include="Storyboards\CustomerRegisterViewController.cs" />
-        <Compile Include="Storyboards\CustomerRegisterViewController.designer.cs">
+        <Compile Include="Controllers\CustomerRegisterViewController.cs" />
+        <Compile Include="Controllers\CustomerRegisterViewController.designer.cs">
           <DependentUpon>CustomerRegisterViewController.cs</DependentUpon>
         </Compile>
-        <Compile Include="Storyboards\TattooRegisterViewController.cs" />
-        <Compile Include="Storyboards\TattooRegisterViewController.designer.cs">
+        <Compile Include="Controllers\TattooRegisterViewController.cs" />
+        <Compile Include="Controllers\TattooRegisterViewController.designer.cs">
           <DependentUpon>TattooRegisterViewController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
