@@ -18,9 +18,21 @@ namespace TappIOS.Storyboards
 			base.ViewDidLoad();
 		}
 
-		//partial void btnContinueRegisterScreen_TouchUpInside(UIButton sender)
-		//{
-  //          Debug.Write($"Method name {nameof(ViewDidLoad)}", "Did Load");
-  //      }
+        partial void btnContinue(Foundation.NSObject sender)
+		{
+            Debug.Write($"Method name {nameof(ViewDidLoad)}", "Click");
+
+            TattooRegisterViewController tattooRegisterVC = this.Storyboard.InstantiateViewController("TattooRegisterViewController") as TattooRegisterViewController;
+            if (tattooRegisterVC != null)
+            {
+                tattooRegisterVC.Name = "D13";
+                this.NavigationController.PushViewController(tattooRegisterVC, true);
+            }
+        }
+
+        //partial void btnContinueRegisterScreen_TouchUpInside(UIButton sender)
+        //{
+        //          Debug.Write($"Method name {nameof(ViewDidLoad)}", "Did Load");
+        //      }
     }
 }
