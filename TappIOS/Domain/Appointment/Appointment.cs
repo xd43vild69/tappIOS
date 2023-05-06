@@ -3,8 +3,8 @@ using TappIOS.Services.Enums;
 
 namespace TappIOS.Domain.Appointment
 {
-	public class Appointment
-	{
+	public class Appointment : BaseEntity
+    {
         
 		public Guid AppointmentId { get; set; }
         public Guid CustomerId { get; set; }

@@ -200,6 +200,7 @@
         <Compile Include="Controllers\MainViewController.designer.cs">
           <DependentUpon>MainViewController.cs</DependentUpon>
         </Compile>
+        <Compile Include="Domain\Appointment\Services\AppoitmentRepository.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

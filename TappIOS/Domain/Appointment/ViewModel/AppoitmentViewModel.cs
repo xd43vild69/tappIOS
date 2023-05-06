@@ -1,17 +1,18 @@
 ﻿using System;
+using TappIOS.Services;
 namespace TappIOS.Domain.Appointment.ViewModel
 {
-	public class AppoitmentViewModel
-	{
-		public AppoitmentViewModel()
-		{
-		}
+    public interface IAppoitmentViewModel : IGenericViewModel<Appointment>
+    {
+    }
 
-		void Create() { }
+    public class AppoitmentViewModel : GenericViewModel<Appointment>, IAppoitmentViewModel
+    {
+        public AppoitmentViewModel() { }
+        void Create() { }
         void Update() { }
-		void Get() { }
+        void Get() { }
         void Notify() { }
-
     }
 }
 
