@@ -9,11 +9,9 @@ using System.CodeDom.Compiler;
 
 namespace TappIOS.Storyboards
 {
-	[Register ("TattooRegisterViewController")]
-	partial class TattooRegisterViewController
+	[Register ("CustomerRegisteredViewController")]
+	partial class CustomerRegisteredViewController
 	{
-		[Action ("btnContinue:")]
-		partial void btnContinue (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

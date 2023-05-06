@@ -21,7 +21,7 @@ namespace TappIOS.Storyboards
 
         partial void btnContinue(Foundation.NSObject sender)
 		{
-            Debug.Write($"Method name {nameof(ViewDidLoad)}", "Click");
+            Debug.Write($"Method name {nameof(btnContinue)}", "Click");
 
             TattooRegisterViewController tattooRegisterVC = this.Storyboard.InstantiateViewController("TattooRegisterViewController") as TattooRegisterViewController;
             if (tattooRegisterVC != null)

@@ -175,17 +175,9 @@
         <Compile Include="Domain\Customer\VIewModel\CustomerViewModel.cs" />
         <Compile Include="Domain\Appointment\Appointment.cs" />
         <Compile Include="Domain\Appointment\ViewModel\AppoitmentViewModel.cs" />
-        <Compile Include="Storyboards\MainViewController.cs" />
-        <Compile Include="Storyboards\MainViewController.designer.cs">
-          <DependentUpon>MainViewController.cs</DependentUpon>
-        </Compile>
         <Compile Include="Storyboards\UserCreationViewController.cs" />
         <Compile Include="Storyboards\UserCreationViewController.designer.cs">
           <DependentUpon>UserCreationViewController.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Storyboards\Main2ViewController.cs" />
-        <Compile Include="Storyboards\Main2ViewController.designer.cs">
-          <DependentUpon>Main2ViewController.cs</DependentUpon>
         </Compile>
         <Compile Include="Controllers\CustomerRegisterViewController.cs" />
         <Compile Include="Controllers\CustomerRegisterViewController.designer.cs">
@@ -194,6 +186,19 @@
         <Compile Include="Controllers\TattooRegisterViewController.cs" />
         <Compile Include="Controllers\TattooRegisterViewController.designer.cs">
           <DependentUpon>TattooRegisterViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Services\Enums\LocationTatttoo.cs" />
+        <Compile Include="Controllers\CustomerRegisteredViewController.cs" />
+        <Compile Include="Controllers\CustomerRegisteredViewController.designer.cs">
+          <DependentUpon>CustomerRegisteredViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Controllers\Main2ViewController.cs" />
+        <Compile Include="Controllers\Main2ViewController.designer.cs">
+          <DependentUpon>Main2ViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Controllers\MainViewController.cs" />
+        <Compile Include="Controllers\MainViewController.designer.cs">
+          <DependentUpon>MainViewController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

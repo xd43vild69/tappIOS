@@ -2,26 +2,52 @@
 
 using System;
 using System.Diagnostics;
-
 using Foundation;
-using TappIOS.Domain.Customer;
 using UIKit;
+using TappIOS.Domain.Customer;
+using TappIOS.Domain.Appointment;
+using System.Collections.Generic;
 
 namespace TappIOS.Storyboards
 {
-	public partial class TattooRegisterViewController : UIViewController
-	{
-		public Customer Customer { get; set; }
+    public partial class TattooRegisterViewController : UIViewController
+    {
+        public Customer Customer { get; set; }
 
-		public TattooRegisterViewController (IntPtr handle) : base (handle)
-		{
-		}
+        public TattooRegisterViewController(IntPtr handle) : base(handle)
+        {
+        }
 
         public override async void ViewDidLoad()
         {
             base.ViewDidLoad();
 
             Debug.Write($"String {Customer.Name}", "Click");
+        }
+
+        partial void btnContinue(Foundation.NSObject sender)
+        {
+            Debug.Write($"Method name {nameof(btnContinue)}", "Click");
+
+            var customerRegisteredVC = this.Storyboard.InstantiateViewController("CustomerRegisteredViewController") as CustomerRegisteredViewController;
+            if (customerRegisteredVC != null)
+            {
+
+                var appointment = new Appointment()
+                {
+                    Size = 10,
+                    Locacation = Services.Enums.LocationTatttoo.Face,
+                    Description = "Description1",
+                    References = "Reference1"
+                };
+
+                customerRegisteredVC.Customer = Customer;
+                customerRegisteredVC.Customer.Appointments = new List<Appointment>();
+
+                customerRegisteredVC.Customer.Appointments.Add(appointment);
+
+                this.NavigationController.PushViewController(customerRegisteredVC, true);
+            }
         }
     }
 }
