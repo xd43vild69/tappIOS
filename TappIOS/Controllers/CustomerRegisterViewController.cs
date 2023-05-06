@@ -3,6 +3,7 @@
 using System;
 using System.Diagnostics;
 using Foundation;
+using TappIOS.Domain.Customer;
 using UIKit;
 
 namespace TappIOS.Storyboards
@@ -25,7 +26,16 @@ namespace TappIOS.Storyboards
             TattooRegisterViewController tattooRegisterVC = this.Storyboard.InstantiateViewController("TattooRegisterViewController") as TattooRegisterViewController;
             if (tattooRegisterVC != null)
             {
-                tattooRegisterVC.Name = "D13";
+                var customer = new Customer()
+                {
+                    Name = "D13",
+                    Cellphone = "333",
+                    Email = "x@gmail.com",
+                    InstagramUser = "xxxxx"                    
+                };
+
+                tattooRegisterVC.Customer = customer;
+
                 this.NavigationController.PushViewController(tattooRegisterVC, true);
             }
         }

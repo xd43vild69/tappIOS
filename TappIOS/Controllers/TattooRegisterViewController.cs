@@ -4,13 +4,14 @@ using System;
 using System.Diagnostics;
 
 using Foundation;
+using TappIOS.Domain.Customer;
 using UIKit;
 
 namespace TappIOS.Storyboards
 {
 	public partial class TattooRegisterViewController : UIViewController
 	{
-		public string Name { get; set; }
+		public Customer Customer { get; set; }
 
 		public TattooRegisterViewController (IntPtr handle) : base (handle)
 		{
@@ -20,7 +21,7 @@ namespace TappIOS.Storyboards
         {
             base.ViewDidLoad();
 
-            Debug.Write($"Method name {Name}", "Click");
+            Debug.Write($"String {Customer.Name}", "Click");
         }
     }
 }

@@ -5,6 +5,9 @@ namespace TappIOS.Domain.Customer
 	{
 
         public string Name { get; set; }
+        public string Cellphone { get; set; }
+        public string Email { get; set; } // Add validation-Regex email on set
+        public string InstagramUser { get; set; }
 
         public Customer()
 		{
