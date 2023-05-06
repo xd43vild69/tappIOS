@@ -5,6 +5,8 @@ using System.Diagnostics;
 using Foundation;
 using UIKit;
 using TappIOS.Domain.Customer;
+using CommonServiceLocator;
+using TappIOS.Domain.Customer.VIewModel;
 
 namespace TappIOS.Storyboards
 {
@@ -22,8 +24,18 @@ namespace TappIOS.Storyboards
             base.ViewDidLoad();
 
             Debug.Write($"String {Customer.Name}", "DidLoad");
+
+            CreateCustomer();
+        }
+
+        private void CreateCustomer()
+        {
+            var x = ServiceLocator.Current.GetInstance<CustomerViewModel>();
+            x.Create(Customer);
+
             //TODO: check if everything is ok then save
             //TODO: Or show message error
         }
+
     }
 }
