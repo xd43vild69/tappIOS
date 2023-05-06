@@ -2,20 +2,21 @@
 
 using System;
 using System.Diagnostics;
-
 using Foundation;
-using TappIOS.Domain.Customer;
 using UIKit;
+using TappIOS.Domain.Customer;
+using TappIOS.Domain.Appointment;
+using System.Collections.Generic;
 
 namespace TappIOS.Storyboards
 {
-	public partial class TattooRegisterViewController : UIViewController
-	{
-		public Customer Customer { get; set; }
+    public partial class TattooRegisterViewController : UIViewController
+    {
+        public Customer Customer { get; set; }
 
-		public TattooRegisterViewController (IntPtr handle) : base (handle)
-		{
-		}
+        public TattooRegisterViewController(IntPtr handle) : base(handle)
+        {
+        }
 
         public override async void ViewDidLoad()
         {
@@ -25,23 +26,27 @@ namespace TappIOS.Storyboards
         }
 
         partial void btnContinue(Foundation.NSObject sender)
-		{
+        {
             Debug.Write($"Method name {nameof(btnContinue)}", "Click");
 
-            var tattooRegisterVC = this.Storyboard.InstantiateViewController("CustomerRegisteredViewController") as CustomerRegisteredViewController;
-            if (tattooRegisterVC != null)
+            var customerRegisteredVC = this.Storyboard.InstantiateViewController("CustomerRegisteredViewController") as CustomerRegisteredViewController;
+            if (customerRegisteredVC != null)
             {
-                var customer = new Customer()
+
+                var appointment = new Appointment()
                 {
-                    Name = "D13",
-                    Cellphone = "333",
-                    Email = "x@gmail.com",
-                    InstagramUser = "xxxxx"                    
+                    Size = 10,
+                    Locacation = Services.Enums.LocationTatttoo.Face,
+                    Description = "Description1",
+                    References = "Reference1"
                 };
 
-                //tattooRegisterVC.Customer = customer;
+                customerRegisteredVC.Customer = Customer;
+                customerRegisteredVC.Customer.Appointments = new List<Appointment>();
 
-                this.NavigationController.PushViewController(tattooRegisterVC, true);
+                customerRegisteredVC.Customer.Appointments.Add(appointment);
+
+                this.NavigationController.PushViewController(customerRegisteredVC, true);
             }
         }
     }
