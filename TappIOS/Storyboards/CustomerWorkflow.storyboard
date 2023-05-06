@@ -209,7 +209,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Continue"/>
                                         <connections>
-                                            <segue destination="MYS-M7-ldg" kind="show" id="ER3-mq-aOd"/>
+                                            <action selector="btnContinue:" destination="ZP1-Nn-SCo" eventType="touchUpInside" id="eB3-eM-WHy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -237,20 +237,20 @@
             </objects>
             <point key="canvasLocation" x="495" y="-13"/>
         </scene>
-        <!--View Controller-->
+        <!--Customer Registered View Controller-->
         <scene sceneID="Kyw-U5-T8r">
             <objects>
-                <viewController id="MYS-M7-ldg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomerRegisteredViewController" id="MYS-M7-ldg" customClass="CustomerRegisteredViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1yg-RK-JRC"/>
                         <viewControllerLayoutGuide type="bottom" id="YMP-aP-g09"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LbE-Id-yll">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RegisterCompleted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWx-PK-Wbb">
-                                <rect key="frame" x="278.5" y="487.5" width="147" height="21"/>
+                                <rect key="frame" x="343.5" y="545.5" width="147" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

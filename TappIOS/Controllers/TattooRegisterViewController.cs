@@ -24,11 +24,11 @@ namespace TappIOS.Storyboards
             Debug.Write($"String {Customer.Name}", "Click");
         }
 
-        void btnContinue(Foundation.NSObject sender)
+        partial void btnContinue(Foundation.NSObject sender)
 		{
             Debug.Write($"Method name {nameof(btnContinue)}", "Click");
 
-            TattooRegisterViewController tattooRegisterVC = this.Storyboard.InstantiateViewController("TattooRegisterViewController") as TattooRegisterViewController;
+            var tattooRegisterVC = this.Storyboard.InstantiateViewController("CustomerRegisteredViewController") as CustomerRegisteredViewController;
             if (tattooRegisterVC != null)
             {
                 var customer = new Customer()
@@ -39,7 +39,7 @@ namespace TappIOS.Storyboards
                     InstagramUser = "xxxxx"                    
                 };
 
-                tattooRegisterVC.Customer = customer;
+                //tattooRegisterVC.Customer = customer;
 
                 this.NavigationController.PushViewController(tattooRegisterVC, true);
             }
