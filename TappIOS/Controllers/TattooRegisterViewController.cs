@@ -21,8 +21,7 @@ namespace TappIOS.Storyboards
         public override async void ViewDidLoad()
         {
             base.ViewDidLoad();
-
-            Debug.Write($"String {Customer.Name}", "Click");
+            Debug.Write($"{nameof(ViewDidLoad)}", "TattoRegisterVC");
         }
 
         partial void btnContinue(Foundation.NSObject sender)
@@ -32,13 +31,12 @@ namespace TappIOS.Storyboards
             var customerRegisteredVC = this.Storyboard.InstantiateViewController("CustomerRegisteredViewController") as CustomerRegisteredViewController;
             if (customerRegisteredVC != null)
             {
-
                 var appointment = new Appointment()
                 {
-                    Size = 10,
+                    Size = decimal.Parse(TattooSizeText.Text),
                     Locacation = Services.Enums.LocationTatttoo.Face,
-                    Description = "Description1",
-                    References = "Reference1"
+                    Description = TattooDescriptionText.Text,
+                    References = TattooReferencesText.Text
                 };
 
                 customerRegisteredVC.Customer = Customer;

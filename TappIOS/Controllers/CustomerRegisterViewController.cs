@@ -17,10 +17,12 @@ namespace TappIOS.Storyboards
 		public override async void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-		}
+            Debug.Write($"{nameof(ViewDidLoad)}", "CustomerRegisterVC");
+        }
 
         partial void btnContinue(Foundation.NSObject sender)
 		{
+
             Debug.Write($"Method name {nameof(btnContinue)}", "Click");
 
             TattooRegisterViewController tattooRegisterVC = this.Storyboard.InstantiateViewController("TattooRegisterViewController") as TattooRegisterViewController;
@@ -28,10 +30,10 @@ namespace TappIOS.Storyboards
             {
                 var customer = new Customer()
                 {
-                    Name = "D13",
-                    Cellphone = "333",
-                    Email = "x@gmail.com",
-                    InstagramUser = "xxxxx"                    
+                    Name = CustomerNameText.Text,
+                    Cellphone = CustomerCellphoneText.Text,
+                    Email = CustomerEmailText.Text,
+                    InstagramUser = CustomerInstagramText.Text                    
                 };
 
                 tattooRegisterVC.Customer = customer;
@@ -39,10 +41,5 @@ namespace TappIOS.Storyboards
                 this.NavigationController.PushViewController(tattooRegisterVC, true);
             }
         }
-
-        //partial void btnContinueRegisterScreen_TouchUpInside(UIButton sender)
-        //{
-        //          Debug.Write($"Method name {nameof(ViewDidLoad)}", "Did Load");
-        //      }
     }
 }

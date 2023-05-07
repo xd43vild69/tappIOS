@@ -47,6 +47,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="af8-6r-dOr" userLabel="CustomerNameText">
                                         <rect key="frame" x="0.0" y="49" width="754" height="38.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="CustomerNameText"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -118,6 +119,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="j8T-OO-qCT" secondAttribute="trailing" constant="20" id="xdK-Db-4AO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CustomerCellphoneText" destination="P11-RL-Uav" id="zmf-rK-pcR"/>
+                        <outlet property="CustomerEmailText" destination="sSz-wq-m3V" id="0CL-fI-CgQ"/>
+                        <outlet property="CustomerInstagramText" destination="Tp1-J8-A4F" id="dmn-ki-PYm"/>
+                        <outlet property="CustomerNameText" destination="af8-6r-dOr" id="2iN-h6-0AD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V0w-bp-ALI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,6 +239,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X68-pZ-lPf"/>
+                    <connections>
+                        <outlet property="TattooDescriptionText" destination="y5p-nx-ns1" id="nqn-7q-Yhb"/>
+                        <outlet property="TattooLocationText" destination="5UC-UK-5Qk" id="fy1-pm-pkT"/>
+                        <outlet property="TattooReferencesText" destination="ini-59-w2K" id="5Hp-jc-t5i"/>
+                        <outlet property="TattooSizeText" destination="H0g-op-QhU" id="1eA-tf-bb0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0h-HY-y25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
